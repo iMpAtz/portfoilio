@@ -75,7 +75,10 @@ export const FloatingNav = ({
           <span
             key={`link=${idx}`}
             onClick={() => {
-              const section = document.getElementById(navItem.link.replace('#', ''));
+              let section = null;
+              if (typeof document !== "undefined") {
+                section = document.getElementById(navItem.link.replace('#', ''));
+              }
               if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });
               }

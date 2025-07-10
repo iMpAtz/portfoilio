@@ -38,13 +38,6 @@ export const projects = [
   }
 ];
 
-export const testimonials = [
-
-];
-
-export const companies = [
-  
-];
 
 export const workExperience = [
   {

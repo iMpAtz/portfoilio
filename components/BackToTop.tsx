@@ -4,25 +4,36 @@ const BackToTop: React.FC = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShow(window.scrollY > 200);
+    function handleScroll() {
+      if (typeof window !== "undefined") {
+        setShow(window.scrollY > 200);
+      }
+    }
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    const hero = document.getElementById("hero");
-    if (hero) {
-      hero.scrollIntoView({ behavior: "smooth" });
-    } else {
+  const handleClick = () => {
+    if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    if (typeof document !== "undefined") {
+      const hero = document.getElementById("hero");
+      if (hero) {
+        hero.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
   return show ? (
     <button
-      onClick={scrollToTop}
+      onClick={handleClick}
       style={{
         position: "fixed",
         bottom: "2rem",
