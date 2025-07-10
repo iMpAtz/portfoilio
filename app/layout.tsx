@@ -3,13 +3,15 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jiranuwat's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  description: "Jiranuwat's Portfolio",
+  icons: {
+    icon: "/public/profile.jpg",
+  },
 };
 
 export default function RootLayout({
