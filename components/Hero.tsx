@@ -3,10 +3,11 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import Image from "next/image"; // ถ้าใช้ Next.js
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div id="hero" className="pb-20 pt-36 mt-40">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -43,6 +44,17 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
 
+          {/* Section รูปโปรไฟล์ */}
+          <div className="mb-6">
+            <Image
+              src="/profile.jpg" // หรือ path รูปของคุณ
+              alt="Profile"
+              width={180}
+              height={180}
+              className="rounded-full border-4 border-white shadow-lg"
+            />
+          </div>
+
           {/**
            *  Link: https://ui.aceternity.com/components/text-generate-effect
            *
@@ -54,7 +66,10 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I'm Pat from BU I have interesting with about to be Ethical Hacker.
+            Hi! My name is Pat from Bangkok University. I have interesting with about to be Ethical Hacker.
+            And I always like to learn new things.
+            I'm wish i can be a good Ethical Hacker.
+            Please contact me if you want to know more about me.
           </p>
 
           <a href="#about">

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 

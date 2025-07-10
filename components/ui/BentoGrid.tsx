@@ -42,6 +42,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  skills,
 }: {
   className?: string;
   id: number;
@@ -51,6 +52,7 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  skills?: string[];
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
@@ -124,16 +126,14 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
-            {description}
-          </div>
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
+          {/* ปรับให้ title อยู่ซ้ายบน */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 mb-2 text-left`}
           >
             {title}
+          </div>
+          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+            {description}
           </div>
 
           {/* for the github 3d globe */}
@@ -191,6 +191,15 @@ export const BentoGridItem = ({
                 otherClasses="!bg-[#161A31]"
               />
             </div>
+          )}
+          {skills && (
+            <ul className="flex flex-wrap gap-2 mt-4">
+              {skills.map(skill => (
+                <li key={skill} className="bg-black/10 dark:bg-white/10 px-3 py-1 rounded-full text-xs">
+                  {skill}
+                </li>
+              ))}
+            </ul>
           )}
         </div>
       </div>

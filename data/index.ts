@@ -1,6 +1,7 @@
 export const navItems = [
+  { name: "Home", link: "#hero" },
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#workExperience" },
+  { name: "Projects", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -8,12 +9,21 @@ export const gridItems = [
   {
     id: 1,
     title: "My Skill",
-    description: "",
+    description: "ทักษะด้าน Cybersecurity & Ethical Hacking",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",
     spareImg: "",
+    skills: [
+      "Pentest",
+      "Kali Linux",
+      "Report Writing",
+      "Problem Solving",
+      "CTF",
+      "Network Security",
+      "Web Exploitation"
+    ]
   }
 ];
 
