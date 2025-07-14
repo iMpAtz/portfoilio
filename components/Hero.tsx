@@ -61,16 +61,16 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="My Name is Jiranuwat Muangseag"
+            words="Jiranuwat Muangseag"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! My name is Pat from Bangkok University. I have interesting with about to be Ethical Hacker.
-            And I always like to learn new things.
-            I'm wish i can be a good Ethical Hacker.
-            Please contact me if you want to know more about me.
+            Hi! My name is Pat from Bangkok University. I have interesting  about Cyber Security.
           </p>
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            I'm wish i can be a good Ethical Hacker. Please contact me if you want to know more about me.
+          </p>
+
 
           <a href="#about">
             <MagicButton

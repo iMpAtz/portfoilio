@@ -77,8 +77,11 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        // ปรับ col-span สำหรับ id 1 และ 2 ให้อยู่ข้างกันเต็มแถว
+        id === 1 || id === 2
+          ? "md:col-span-3 lg:col-span-3 row-span-1"
+          : "row-span-1",
+        "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -132,12 +135,11 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight md:max-w-42 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
 
           {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
 
           {/* Tech stack list div */}
           {id === 3 && (
