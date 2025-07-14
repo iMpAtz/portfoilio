@@ -9,6 +9,7 @@ const Experience = dynamic(() => import("@/components/Experience"), { ssr: false
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 const BackToTop = dynamic(() => import("@/components/BackToTop"), { ssr: false });
 import AboutMe from "@/components/AboutMe";
+import Skills from "@/components/Skills";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <AboutMe />
-        <Grid/>
+        <Skills />
         <Experience />
         <Approach />
         <Footer />
