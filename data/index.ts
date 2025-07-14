@@ -1,7 +1,8 @@
 export const navItems = [
   { name: "Home", link: "#hero" },
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#experience" },
+  { name: "About", link: "#about-me" },
+  { name: "Skills", link: "#skills" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -50,7 +51,7 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Multivendor E-Commerce Web App ",
+    title: "Multivendor 5-Commerce Web App ",
     desc: "Designed and developed Multivendor E-Commerce Web App.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
@@ -62,21 +63,16 @@ export const workExperience = [
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   }
-
  
 ];
 
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
     img: "/twit.svg",
   },
   {
-    id: 3,
+    id: 2,
     img: "/link.svg",
   },
 ];
