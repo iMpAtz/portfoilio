@@ -47,7 +47,7 @@ export const workExperience = [
     title: "Create Web Social Media like Twiiter",
     desc: "Fullstack for this project.",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/exp2.svg",
   },
   {
     id: 2,
@@ -61,7 +61,14 @@ export const workExperience = [
     title: "BU CTF COMPETTION 2025",
     desc: "Participate in  BU CTF COMPTTIION 2025 with 5th runner place",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 4,
+    title: "PENTEST REPORT PROJECT",
+    desc: "Create a pentest report for a class project, using tools such as kali linux, and other tools.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp1.svg",
   }
  
 ];
