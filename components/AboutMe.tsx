@@ -4,17 +4,17 @@ import Image from "next/image";
 const educations = [
   {
     name: "Damnoen Wittaya School",
-    year: "2010-2016",
+    year: "2005-2017",
     logo: "/dwslogo.png",
   },
   {
     name: "Darunaratchaburi School",
-    year: "2016-2021",
+    year: "2018-2021",
     logo: "/darunaratchaburi_logo.png",
   },
   {
     name: "Bangkok University",
-    year: "2022-2026",
+    year: "2022-Present",
     logo: "/bangkok_university_logo.png", // ใส่โลโก้ที่ public folder หรือเปลี่ยนชื่อไฟล์ตามจริง
   },
 
